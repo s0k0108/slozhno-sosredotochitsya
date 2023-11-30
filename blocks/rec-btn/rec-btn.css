@@ -1,0 +1,40 @@
+.rec-btn {
+    margin: 0;
+    padding: 0 28px 0 0;
+    box-sizing: border-box;
+    align-self: flex-end;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--rec-button-color);
+    top: 10px;
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+    .rec-btn {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.rec-btn::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--rec-button-color);
+    top: 8px;
+    right: 8px;
+    filter: drop-shadow(4px 4px 10px var(--rec-button-color));
+}
+
+@media (prefers-color-scheme: light) {
+    .rec-btn {
+        display: none;
+    }
+}

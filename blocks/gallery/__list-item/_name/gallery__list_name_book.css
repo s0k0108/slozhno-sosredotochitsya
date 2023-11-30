@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+    .gallery__list_name_book {
+        grid-area: book;
+    }
+}

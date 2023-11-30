@@ -1,0 +1,23 @@
+.link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--main-list-text-color);
+    text-shadow: 2px 2px 0 var(--header-title-shadow-color);
+}
+
+.link:hover {
+    border-bottom: 1px solid var(--main-list-text-color);
+}
+
+.link:focus {
+    outline: none;
+}
+
+.link:focus-visible {
+    border: 1px solid var(--main-list-text-color);
+}

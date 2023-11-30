@@ -1,0 +1,30 @@
+.gallery__list {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .gallery__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 192px 230px 318px;
+        grid-template-areas:
+        "sunset sunset icecream"
+        "audio book icecream"
+        "audio street street";
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery__list {
+        grid-template-rows: 260px 315px 428px;
+    }
+}

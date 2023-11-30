@@ -1,0 +1,15 @@
+.header__switcher {
+    margin: 63px 0 0;
+}
+
+@media (min-width: 768px) {
+    .theme-switcher {
+        margin: 170px 0 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .theme-switcher {
+        margin: 0 0 0 20px;
+    }
+}

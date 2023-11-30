@@ -1,0 +1,18 @@
+.gallery__image_name_sunset {
+    width: 355px;
+    height: 142px;
+}
+
+@media (min-width: 768px) {
+    .gallery__image_name_sunset {
+        width: 479px;
+        height: 192px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery__image_name_sunset {
+        width: 649px;
+        height: 260px;
+    }
+}

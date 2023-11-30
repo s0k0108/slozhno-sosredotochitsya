@@ -1,0 +1,22 @@
+.footer__title {
+    margin: 0;
+    padding: 0;
+    font-size: var(--header-title-font-size-s);
+    line-height: 82%;
+    font-weight: bold;
+    font-style: normal;
+    color: var(--header-title-color);
+    text-shadow: 4px 4px 0 var(--header-title-shadow-color);
+}
+
+@media (min-width: 768px) {
+    .footer__title {
+        font-size: var(--header-title-font-size-m);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer__title {
+        font-size: var(--header-title-font-size-l);
+    }
+}

@@ -1,0 +1,12 @@
+.info__list-title {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: var(--main-text-font-size);
+    line-height: 23.4px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--main-list-title-color);
+    background-color: var(--text-accent);
+}

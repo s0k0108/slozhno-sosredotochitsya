@@ -1,4 +1,7 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+    --header-text-font-size: 18px;
+    --header-title-font-size-s: 116px;
+    --header-title-font-size-m: 120px;
+    --header-title-font-size-l: 157px;
+    --main-text-font-size: 18px;
+}

@@ -1,0 +1,23 @@
+.theme-switcher__button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 70px;
+    height: 26px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--button-color);
+    line-height: 18px;
+    font-family: IBMPlexMono, Arial, sans-serif;
+}
+
+.theme-switcher__button:focus {
+    outline: none;
+}
+
+.theme-switcher__button:focus-visible {
+    border-bottom: 1px solid var(--button-color);
+}

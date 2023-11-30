@@ -1,0 +1,7 @@
+.theme-switcher__button_active {
+    border: 1px solid var(--button-color);
+}
+
+.theme-switcher__button_active:hover {
+    border: 1px solid var(--button-color-hover);
+}

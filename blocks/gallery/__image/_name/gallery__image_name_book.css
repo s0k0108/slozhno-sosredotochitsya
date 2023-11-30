@@ -1,0 +1,18 @@
+.gallery__image_name_book {
+    width: 355px;
+    height: 355px;
+}
+
+@media (min-width: 768px) {
+    .gallery__image_name_book {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery__image_name_book {
+        width: 315px;
+        height: 315px;
+    }
+}

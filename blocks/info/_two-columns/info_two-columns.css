@@ -1,0 +1,13 @@
+@media(min-width: 768px) {
+    .info_two-columns {
+        padding: 2px 0 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 1024px) {
+    .info_two-columns {
+        padding: 2px 0 0;
+    }
+}

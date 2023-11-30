@@ -1,0 +1,51 @@
+@import "./variables.css";
+
+@import "../fonts/fonts.css";
+@import "../blocks/visually-hidden/visually-hidden.css";
+
+@import "../blocks/link/link.css";
+
+@import "../blocks/page/page.css";
+
+@import "../blocks/header/header.css";
+@import "../blocks/header/__title/header__title.css";
+@import "../blocks/header/__text/header__text.css";
+@import "../blocks/header/__switcher/header__switcher.css";
+
+@import "../blocks/rec-btn/rec-btn.css";
+
+@import "../blocks/theme-switcher/theme-switcher.css";
+@import "../blocks/theme-switcher/__item/theme-switcher__item.css";
+@import "../blocks/theme-switcher/__button/theme-switcher__button.css";
+@import "../blocks/theme-switcher/__button/_active/theme-switcher__button_active.css";
+
+@import "../blocks/main/main.css";
+
+@import "../blocks/info/info.css";
+@import "../blocks/info/__title/info__title.css";
+@import "../blocks/info/__list/info__list.css";
+@import "../blocks/info/__list-item/info__list-item.css";
+@import "../blocks/info/__list-title/info__list-title.css";
+@import "../blocks/info/__list-text/info__list-text.css";
+@import "../blocks/info/__list-title/_thin/info__list-title_thin.css";
+@import "../blocks/info/_two-columns/info_two-columns.css";
+@import "../blocks/info/__list/_three-columns/info__list_three-columns.css";
+
+@import "../blocks/gallery/gallery.css";
+@import "../blocks/gallery/__title/gallery__title.css";
+@import "../blocks/gallery/__list/gallery__list.css";
+@import "../blocks/gallery/__list-item/gallery__list-item.css";
+@import "../blocks/gallery/__image/gallery__image.css";
+@import "../blocks/gallery/__image/_name/gallery__image_name_audio.css";
+@import "../blocks/gallery/__image/_name/gallery__image_name_book.css";
+@import "../blocks/gallery/__image/_name/gallery__image_name_sunset.css";
+@import "../blocks/gallery/__image/_name/gallery__image_name_icecream.css";
+@import "../blocks/gallery/__image/_name/gallery__image_name_street.css";
+@import "../blocks/gallery/__list-item/_name/gallery__list_name_icecream.css";
+@import "../blocks/gallery/__list-item/_name/gallery__list_name_sunset.css";
+@import "../blocks/gallery/__list-item/_name/gallery__list_name_street.css";
+@import "../blocks/gallery/__list-item/_name/gallery__list_name_book.css";
+@import "../blocks/gallery/__list-item/_name/gallery__list_name_audio.css";
+
+@import "../blocks/footer/footer.css";
+@import "../blocks/footer/__title/footer__title.css";

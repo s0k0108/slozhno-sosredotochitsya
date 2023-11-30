@@ -1,0 +1,19 @@
+:root {
+    --bg-color: #000028;
+    --header-title-color: #DB00FF;
+    --bg-image: url('../../images/cover-image-dark.png');
+    --header-title-shadow-color: #FF0070;
+    --arrow-color: #FF0070;
+    --header-text-color: #000028;
+    --text-accent: #FF0070;
+    --button-color: #FF0070;
+    --button-color-hover: rgba(255, 0, 112, 0.40);
+    --rec-button-color: #FF0070;
+    --main-title-color: #FF0070;
+    --main-list-title-color: #000028;
+    --main-list-text-color: #F1B2CE;
+}
+
+.rec-btn {
+    display: block;
+}

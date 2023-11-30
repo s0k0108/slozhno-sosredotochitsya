@@ -1,0 +1,7 @@
+@media(min-width: 1024px) {
+    .info__list_three-columns {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
