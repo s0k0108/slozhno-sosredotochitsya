@@ -8,4 +8,5 @@
 
 .switcher__btn:checked + .switcher__label {
     border: 1px solid var(--header-button-color);
+    pointer-events: none;
 }

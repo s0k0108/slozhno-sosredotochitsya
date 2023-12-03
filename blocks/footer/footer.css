@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: 668px;
+    height: 100vh;
 }
 
 .footer::after,
@@ -37,7 +37,6 @@
 @media (min-width: 768px) {
     .footer {
         padding: 20px;
-        min-height: 1024px;
     }
 
     .footer::after {
@@ -50,10 +49,4 @@
         left: 20px;
     }
 
-}
-
-@media (min-width: 1024px) {
-    .footer {
-        min-height: 768px;
-    }
 }
