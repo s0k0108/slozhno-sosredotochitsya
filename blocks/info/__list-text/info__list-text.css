@@ -2,10 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
-    font-size: var(--main-text-font-size);
-    line-height: 23.4px;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--main-list-text-color);
+    font: normal 400 var(--main-text-size) / 23.4px var(--font-family);
+    color: var(--main-text-color);
 }

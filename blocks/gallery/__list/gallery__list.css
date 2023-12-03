@@ -7,8 +7,9 @@
     gap: 10px;
     width: 100%;
     flex-direction: column;
-    align-items: center;
 }
+
+
 
 @media (min-width: 768px) {
     .gallery__list {
@@ -22,6 +23,7 @@
         "audio street street";
     }
 }
+
 
 @media (min-width: 1024px) {
     .gallery__list {

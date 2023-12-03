@@ -1,7 +1,6 @@
-.info__list {
+.info__wrapper {
     margin: 0;
     padding: 0;
-    list-style: none;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;

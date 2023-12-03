@@ -2,24 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: var(--main-text-font-size);
-    line-height: 23px;
-    font-style: normal;
-    font-weight: 700;
+    font: normal 700 var(--main-text-size) / 23.4px var(--font-family);
     color: var(--main-title-color);
-    align-self: flex-start;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .info__title {
-        min-width: 236px;
         max-width: 236px;
     }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
     .info__title {
-        min-width: 314px;
-        max-width: 314px;
+        min-width: 315px;
     }
 }

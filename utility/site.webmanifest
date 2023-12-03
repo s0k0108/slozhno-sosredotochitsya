@@ -1,0 +1,13 @@
+{
+    "name": "Сложно сосредоточиться",
+    "short_name": "Сложно сосредоточиться",
+    "icons": [
+        {
+            "src": "../images/favicon/mobile-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF0070",
+    "display": "standalone"
+}

@@ -3,10 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-    font-size: 18px;
-    line-height: 23.4px;
-    font-weight: 700;
-    font-style: normal;
+    font: normal 700 var(--main-text-size)/23.4px var(--font-family);
     color: var(--main-list-title-color);
-    background-color: var(--text-accent);
+    background-color: var(--text-accent-color);
 }

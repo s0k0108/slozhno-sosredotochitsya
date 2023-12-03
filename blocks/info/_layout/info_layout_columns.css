@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+    .info_layout_columns {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,7 +1,8 @@
 :root {
-    --header-text-font-size: 18px;
-    --header-title-font-size-s: 116px;
-    --header-title-font-size-m: 120px;
-    --header-title-font-size-l: 157px;
-    --main-text-font-size: 18px;
+    --font-family: "IBM Plex Mono", "Courier New", monospace;
+    --header-title-shadow-color: #FF0070;
+    --main-text-size: 18px;
+    --header-title-text-size-mobile: 116px;
+    --header-title-text-size-tablet: 120px;
+    --header-title-text-size-laptop: 157px;
 }

@@ -1,0 +1,17 @@
+.switcher__label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: normal 400 var(--main-text-size)/18px var(--font-family);
+    color: var(--header-button-color);
+    width: 70px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switcher__label:hover {
+    border: 1px solid var(--header-button-border-hover);
+}

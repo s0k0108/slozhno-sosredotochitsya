@@ -2,40 +2,42 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="./images/favicon/favicon.ico" sizes="48x48">
     <link rel="icon" href="./images/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/favicon/mobile-icon.png">
+    <!--<link rel="manifest" href="./utility/site.webmanifest">-->
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/theme/light.css" media="(prefers-color-scheme: light)">
-    <link rel="stylesheet" href="./styles/theme/dark.css" media="(prefers-color-scheme: dark)">
+    <!--Тут подключаются два файла со стилями потому что при переключении стилей не используются классы, а просто переключаются тут. Использование класса по тз вроде является просто рекомендацией-->
+    <link rel="stylesheet" href="styles/scheme/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="styles/scheme/dark.css" media="(prefers-color-scheme: dark)">
     <title>Сложно сосредоточиться</title>
   </head>
   <body class="page">
     <header class="header">
-      <span class="rec-btn">rec</span>
-      <ul class="theme-switcher header__switcher">
-        <li class="theme-switcher__item">
-          <button class="theme-switcher__button" type="button" name="light">день</button>
-        </li>
-        <li class="theme-switcher__item">
-          <button class="theme-switcher__button theme-switcher__button_active" type="button" name="auto">авто</button>
-        </li>
-        <li class="theme-switcher__item">
-          <button class="theme-switcher__button" type="button" name="dark">неон</button>
-        </li>
-      </ul>
-      <h2 class="header__title">no focus</h2>
+      <span class="rec-btn" aria-hidden="true">rec</span>
+      <!--Я заменил на radio button мне кажется они лучше подходят на роль переключателя-->
+      <fieldset class="switcher">
+        <!--Скрытый legend для скринридера-->
+        <legend class="visually-hidden">Тема сайта</legend>
+        <input class="visually-hidden switcher__btn" type="radio" name="scheme" value="light" id="light" aria-label="Светлая">
+        <label class="switcher__label" for="light" aria-hidden="true">день</label>
+        <input class="visually-hidden switcher__btn" type="radio" name="scheme" value="auto" id="auto" aria-label="Автоматическая" checked>
+        <label class="switcher__label" for="auto" aria-hidden="true">авто</label>
+        <input class="visually-hidden switcher__btn" type="radio" name="scheme" value="dark" id="dark" aria-label="Темная">
+        <label class="switcher__label" for="dark" aria-hidden="true">неон</label>
+      </fieldset>
+      <h1 class="header__title">no focus</h1>
       <p class="header__text">Что делать, когда не можешь делать ничего<br> Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">Как сосредоточиться и сохранять внимание</h1>
-      <section class="info info_two-columns">
+      <section class="info">
         <h2 class="info__title">Почему сосредоточиться так сложно</h2>
         <ul class="info__list">
           <li class="info__list-item">
             <h3 class="info__list-title">Многозадачность</h3>
-            <p class="info__list-text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a class="link" href="https://dana.org/article/multicosts-of-multitasking/">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
+            <p class="info__list-text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a class="link" href="https://www.dana.org/article/multicosts-of-multitasking/" target="_blank">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
           </li>
           <li class="info__list-item">
             <h3 class="info__list-title">Дофамин</h3>
@@ -43,9 +45,9 @@
           </li>
         </ul>
       </section>
-      <section class="info">
+      <section class="info info_layout_columns">
         <h2 class="info__title">Что снижает концентрацию внимания?</h2>
-        <ul class="info__list info__list_three-columns">
+        <ul class="info__list info__list_layout_columns">
           <li class="info__list-item">
             <h3 class="info__list-title">Многозадачность</h3>
             <p class="info__list-text">Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко меняющийся мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду на предмет опасности. Например, читать новости вместо работы. Но быть собранными всё время — невозможно. Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть.</p>
@@ -60,70 +62,70 @@
           </li>
         </ul>
       </section>
-      <section class="info info_two-columns">
+      <section class="info">
         <h2 class="info__title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
-        <ul class="info__list">
-          <li class="info__list-item">
-            <h3 class="info__list-title">5 простых (на самом деле не очень) советов</h3>
-          </li>
-          <li class="info__list-item">
-            <h3 class="info__list-title info__list-title_thin">Представьте небо и облака</h3>
-            <p class="info__list-text">Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, а облака — тревожные мысли. И сколько бы их ни было — ясное небо всегда будет где-то там, за тучами, и никуда не денется. Это упражнение поможет вернуться в настоящий момент, а не волноваться о потенциальных проблемах из будущего.</p>
-          </li>
-          <li class="info__list-item">
-            <h3 class="info__list-title info__list-title_thin">Включите музыку</h3>
-            <p class="info__list-text">Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями, которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще попробовать включить плейлист в «белым шумом» или нейромузыкой.</p>
-          </li>
-          <li class="info__list-item">
-            <h3 class="info__list-title info__list-title_thin">Прогуляйтесь</h3>
-            <p class="info__list-text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
-          </li>
-          <li class="info__list-item">
-            <h3 class="info__list-title info__list-title_thin">Хорошо ешьте</h3>
-            <p class="info__list-text">Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: овощи, ягоды, бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.</p>
-          </li>
-          <li class="info__list-item">
-            <h3 class="info__list-title info__list-title_thin">Читайте</h3>
-            <p class="info__list-text">Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть и на несколько часов и круто тренирует направленное внимание.</p>
-          </li>
-        </ul>
+        <div class="info__wrapper">
+          <h3 class="info__list-title">5 простых (на самом деле не очень) советов</h3>
+          <ul class="info__list">
+            <li class="info__list-item">
+              <h4 class="info__list-title info__list-title_weight_thin">Представьте небо и облака</h4>
+              <p class="info__list-text">Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, а облака — тревожные мысли. И сколько бы их ни было — ясное небо всегда будет где-то там, за тучами, и никуда не денется. Это упражнение поможет вернуться в настоящий момент, а не волноваться о потенциальных проблемах из будущего.</p>
+            </li>
+            <li class="info__list-item">
+              <h4 class="info__list-title info__list-title_weight_thin">Включите музыку</h4>
+              <p class="info__list-text">Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями, которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще попробовать включить плейлист в «белым шумом» или нейромузыкой.</p>
+            </li>
+            <li class="info__list-item">
+              <h4 class="info__list-title info__list-title_weight_thin">Прогуляйтесь</h4>
+              <p class="info__list-text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
+            </li>
+            <li class="info__list-item">
+              <h4 class="info__list-title info__list-title_weight_thin">Хорошо ешьте</h4>
+              <p class="info__list-text">Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: овощи, ягоды, бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.</p>
+            </li>
+            <li class="info__list-item">
+              <h4 class="info__list-title info__list-title_weight_thin">Читайте</h4>
+              <p class="info__list-text">Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть и на несколько часов и круто тренирует направленное внимание.</p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="gallery">
         <h2 class="gallery__title">А можно в картинках?</h2>
         <ul class="gallery__list">
-          <li class="gallery__list-item gallery__list_name_sunset">
-            <picture class="gallery__image">
+          <li class="gallery__list-item gallery__list-item_name_sunset">
+            <picture>
               <source srcset="./images/pictures/large/l-sunset.png" media="(min-width: 1024px)">
               <source srcset="./images/pictures/medium/m-sunset.png" media="(min-width: 768px)">
-              <img class="gallery__image_name_sunset" src="./images/pictures/small/s-sunset.png" alt="Картинка заката">
+              <img class="gallery__image" src="./images/pictures/small/s-sunset.png" alt="Картинка заката">
             </picture>
           </li>
-          <li class="gallery__list-item gallery__list_name_icecream">
-            <picture class="gallery__image">
+          <li class="gallery__list-item gallery__list-item_name_icecream">
+            <picture>
               <source srcset="./images/pictures/large/l-icecream.png" media="(min-width: 1024px)">
               <source srcset="./images/pictures/medium/m-icecream.png" media="(min-width: 768px)">
-              <img class="gallery__image_name_icecream" src="./images/pictures/small/s-icecream.png" alt="Картинка мороженого">
+              <img class="gallery__image" src="./images/pictures/small/s-icecream.png" alt="Картинка мороженого">
             </picture>
           </li>
-          <li class="gallery__list-item gallery__list_name_audio">
-            <picture class="gallery__image">
+          <li class="gallery__list-item gallery__list-item_name_audio">
+            <picture>
               <source srcset="./images/pictures/large/l-audio.png" media="(min-width: 1024px)">
               <source srcset="./images/pictures/medium/m-audio.png" media="(min-width: 768px)">
-              <img class="gallery__image_name_audio" src="./images/pictures/small/s-audio.png" alt="Картинка кассеты">
+              <img class="gallery__image" src="./images/pictures/small/s-audio.png" alt="Картинка кассеты">
             </picture>
           </li>
-          <li class="gallery__list-item gallery__list_name_book">
-            <picture class="gallery__image">
+          <li class="gallery__list-item gallery__list-item_name_book">
+            <picture>
               <source srcset="./images/pictures/large/l-book.png" media="(min-width: 1024px)">
               <source srcset="./images/pictures/medium/m-book.png" media="(min-width: 768px)">
-              <img class="gallery__image_name_book" src="./images/pictures/small/s-book.png" alt="Картинка книг">
+              <img class="gallery__image" src="./images/pictures/small/s-book.png" alt="Картинка книг">
             </picture>
           </li>
-          <li class="gallery__list-item gallery__list_name_street">
-            <picture class="gallery__image">
+          <li class="gallery__list-item gallery__list-item_name_street">
+            <picture>
               <source srcset="./images/pictures/large/l-street.png" media="(min-width: 1024px)">
               <source srcset="./images/pictures/medium/m-street.png" media="(min-width: 768px)">
-              <img class="gallery__image_name_street" src="./images/pictures/small/s-street.png" alt="Картинка улицы">
+              <img class="gallery__image" src="./images/pictures/small/s-street.png" alt="Картинка улицы">
             </picture>
           </li>
         </ul>
@@ -132,6 +134,6 @@
     <footer class="footer">
       <h2 class="footer__title">focus</h2>
     </footer>
-    <script src="./scripts/script.js"></script>
+    <script src="./blocks/switcher/switcher.js"></script>
   </body>
 </html>

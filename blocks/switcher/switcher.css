@@ -1,0 +1,20 @@
+.switcher {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 1024px) {
+    .switcher {
+        padding: 0 0 0 20px;
+        align-self: start;
+        justify-self: center;
+        flex-direction: row;
+    }
+}

@@ -1,27 +1,23 @@
 .header__text {
-    margin: 55px 0 0;
-    padding: 0 30px 0 0;
-    font-size: var(--header-text-font-size);
-    font-weight: 700;
-    line-height: 23px;
-    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
     max-width: 355px;
-    align-self: flex-end;
+    font: normal 700 var(--main-text-size) / 23.4px var(--font-family);
     color: var(--header-text-color);
-    background-color: var(--text-accent);
+    justify-self: end;
+    background-color: var(--text-accent-color);
 }
 
 @media (min-width: 768px) {
     .header__text {
-        max-width: 362px;
-        margin: 163px 0 0;
-        padding: 0;
+        max-width: 364px;
     }
 }
 
 @media (min-width: 1024px) {
     .header__text {
-        margin: 114px 0 0;
         max-width: 491px;
     }
 }

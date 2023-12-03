@@ -1,10 +1,21 @@
 .info {
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    width: 100%;
-    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .info{
+        padding: 0 20px;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .info{
+        grid-template-columns: min-content 1fr;
+    }
 }

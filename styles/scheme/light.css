@@ -1,0 +1,14 @@
+:root {
+    --bg-color: #fff1f7;
+    --bg-image: url('../../images/cover-image-light.png');
+    --header-title-color: #FFC2E6;
+    --header-text-color: #353430;
+    --text-accent-color: #FF8DCB;
+    --header-button-color: #353430;
+    --header-button-border-hover: rgba(50, 49, 45, 0.4);
+    --rec-btn: transparent;
+    --arrow-color: #353430;
+    --main-text-color: #353430;
+    --main-title-color:  #353430;
+    --main-list-title-color:  #353430;
+}
