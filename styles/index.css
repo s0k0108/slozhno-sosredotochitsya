@@ -28,6 +28,7 @@
 @import "../blocks/info/__wrapper/info__wrapper.css";
 @import "../blocks/info/_layout/info_layout_columns.css";
 @import "../blocks/info/__list/_layout/info__list_layout_columns.css";
+@import "../blocks/info/__list-title/_weight/info__list-title_weight_thin.css";
 
 @import "../blocks/gallery/gallery.css";
 @import "../blocks/gallery/__title/gallery__title.css";

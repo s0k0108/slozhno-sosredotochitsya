@@ -1,7 +1,7 @@
 const lightStyle = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
 const darkStyle = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
 const switcherButtons = document.querySelectorAll('.switcher__btn');
-const darkSchemeMedia = matchMedia('(prefers-color-scheme: light)');
+const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
 
 function getSavedScheme() {
     return localStorage.getItem('colorScheme');
@@ -51,6 +51,8 @@ function setScheme(scheme) {
 function getSystemScheme() {
     const darkScheme = darkSchemeMedia.matches;
 
+    console.log(darkScheme)
+
     return darkScheme ? 'dark' : 'light';
 }
 
@@ -72,7 +74,7 @@ function setupSwitcher() {
     const savedScheme = getSavedScheme();
 
     if (savedScheme !== null) {
-        const currentRadio = document.querySelector('.switcher__btn[value=${savedScheme}]');
+        const currentRadio = document.querySelector(`.switcher__btn[value=${savedScheme}]`);
         currentRadio.checked = true;
     }
 

@@ -15,3 +15,11 @@
 .switcher__label:hover {
     border: 1px solid var(--header-button-border-hover);
 }
+
+.switcher__label:focus {
+    outline: none;
+}
+
+.switcher__label:focus-visible {
+    border-bottom: 1px solid var(--header-button-color);
+}

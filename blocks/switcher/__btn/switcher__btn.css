@@ -1,11 +1,3 @@
-.switcher__btn:focus {
-    outline: none;
-}
-
-.switcher__btn:focus-visible + .switcher__label {
-    border-bottom: 1px solid var(--header-button-color);
-}
-
 .switcher__btn:checked + .switcher__label {
     border: 1px solid var(--header-button-color);
     pointer-events: none;
