@@ -12,8 +12,9 @@
 @import "../blocks/header/__text/header__text.css";
 
 @import "../blocks/switcher/switcher.css";
-@import "../blocks/switcher/__label/switcher__label.css";
+@import "../blocks/switcher/__item/switcher__item.css";
 @import "../blocks/switcher/__btn/switcher__btn.css";
+@import "../blocks/switcher/__btn/_active/switcher__btn_active.css";
 
 @import "../blocks/rec-btn/rec-btn.css";
 

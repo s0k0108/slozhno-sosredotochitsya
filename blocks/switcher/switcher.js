@@ -50,9 +50,6 @@ function setScheme(scheme) {
 
 function getSystemScheme() {
     const darkScheme = darkSchemeMedia.matches;
-
-    console.log(darkScheme)
-
     return darkScheme ? 'dark' : 'light';
 }
 
@@ -74,13 +71,25 @@ function setupSwitcher() {
     const savedScheme = getSavedScheme();
 
     if (savedScheme !== null) {
-        const currentRadio = document.querySelector(`.switcher__btn[value=${savedScheme}]`);
-        currentRadio.checked = true;
+        const currentBtn = document.querySelector(`.switcher__btn[name=${savedScheme}]`);
+        currentBtn.classList.add('switcher__btn_active');
+        currentBtn.setAttribute('disabled', '');
+    } else {
+        const autoBtn = document.querySelector(`.switcher__btn[name=auto]`);
+        autoBtn.classList.add('switcher__btn_active');
+        autoBtn.setAttribute('disabled', '');
     }
 
     [...switcherButtons].forEach((btn) => {
-        btn.addEventListener('change', (evt) => {
-            setScheme(evt.target.value);
+        btn.addEventListener('click', (evt) => {
+            [...switcherButtons].forEach((button) => {
+                button.classList.remove('switcher__btn_active');
+                button.removeAttribute('disabled', '');
+            })
+
+            setScheme(evt.target.name);
+            btn.classList.add('switcher__btn_active');
+            btn.setAttribute('disabled', '');
         })
     })
 }

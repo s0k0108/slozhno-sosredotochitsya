@@ -1,0 +1,4 @@
+.switcher__btn_active {
+    border: 1px solid var(--header-button-color);
+    pointer-events: none;
+}
